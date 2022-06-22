@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #f5fffa;
+    transition: all 0.5s;
+}
+header{
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    background: #ebf6ff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px #000;
+
+}
+header h1{
+    color: #222;
+}
+.menu{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.menu .navigation span{
+    color: #222;
+    font-size: 1.1em;
+    margin: 0px 15px;
+}
+
+
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+input[type="text"]{
+    background: #8bbbd2;
+    width: 20px;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px;
+}
+input[type="text"]:focus{
+    width: 200px;
+
+}
+button[type="submit"]{
+    position: relative;
+    left: -25px;
+    font-size: 1.2em;
+    border-radius:25px;
+    width: 40px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #2196f3;
+    color: #fff;
+
+}
+button[type="submit"]:hover{
+    background: #ff5722;
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check{
+    left:48.5% ;
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #092c3e;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+    box-shadow: 1px 1px 5px #222;
+}
+input[type="checkbox"]:checked ~ .check{
+    background: #fff;
+}
+
+.navigation{
+    position: relative;
+    width: 280px;
+    height: 60px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navigation ul{
+    display: flex;
+    width: 350px;
+}
+.navigation ul li{
+    list-style: none;
+    position: relative;
+    width: 70px;
+    height: 60px;
+    z-index: 2; 
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-size: 1.5em;
+    transition: 0.5s;
+    color: #2196f3;
+}
+.navigation ul li.active a .icon{
+    transform: translateY(10px);
+}
+
+#menubutton{
+    z-index: 100;
+    font-size: 2em;
+    color: #0083c5;
+}
+#menubutton:active{
+    color: #0d79af;
+}
+.menuu{
+    position: fixed;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 90px;
+    left: -215px;
+    z-index: 15;
+    font-size:1.5em ;
+    background-color: #8bbbd2;
+    width: 200px;
+    height: 250px;
+    border-radius:25px ;
+    opacity: 0.95;
+    transition: all 1s;
+}
+
+.menuu ul a{
+    opacity: 1;
+    transition: all 0.5s;
+    text-decoration: none;
+    color: #222;
+}
+.menuu ul li span{
+    font-size: 1.2em;
+    padding: 10px;
+    color: #005eaa;
+}
+
+.menuu.active ul a{
+    opacity: 1;
+}
+.menuu.active {
+    left: 15px;
+}
+.menuu li{
+    list-style: none;
+    padding: 10px;
+}
+section .title{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+.title1{
+    margin-top: 150px;
+}
+section{
+    padding: 40px;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 10px 20px;
+    position: relative;
+    background:#0d79af;
+    opacity: 0.9;
+    width: 350px;
+    height: 420px;
+    border-radius: 20px;
+    filter: drop-shadow(-20px 20px 40px #398cc055);
+    transition: 0.5s ease;
+
+}
+
+
+
+.contentBx{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+.contentBx .content{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contentBx .content p{
+    visibility: hidden;
+    opacity: 0;
+    top: -100px;
+    position: relative;
+    z-index: 6;
+    visibility: hidden;
+    padding: 15px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.contentBx .content h2{
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1em;
+}
+
+.contentBx .content h2 span{
+    font-size: 00.75em;
+    font-weight: 400;
+    text-transform: initial;
+}
+.imgBx{
+    position: relative;
+    z-index: 7;
+    width: 280px;
+    height: 280px;
+    background: #fff;
+    margin-top: 20px;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+    border: 5px solid #fff;
+    transition: 0.5s;
+
+}
+.imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.card1.active .imgBx{
+    width: 180px;
+    height: 180px;
+}
+.card1.active .contentBx .content p{
+    visibility:visible;
+    opacity: 1;
+    top: 0px;
+}
+.card1.active .content button{
+    top: 0px;
+}
+.card2.active .imgBx{
+    width: 180px;
+    height: 180px;
+}
+.card2.active .contentBx .content p{
+    visibility:visible;
+    opacity: 1;
+    top: 0px;
+}
+.card2.active .content button{
+    top: 0px;
+}
+.card3.active .imgBx{
+    width: 180px;
+    height: 180px;
+}
+.card3.active .contentBx .content p{
+    visibility:visible;
+    opacity: 1;
+    top: 0px;
+}
+.card3.active .content button{
+    top: 0px;
+}
+.content button{
+    position: relative;
+    top: -100px;
+    padding: 10px 35px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    color: #333;
+    box-shadow: -10 10px 10px rgba(0,0,0,0.15);
+    transition: 00.5s;
+}
+.skills{
+    border-radius: 25px;
+    background: #00689b;
+    background-size:cover ;
+    background-repeat:no-repeat ;
+    padding: 100px;
+    margin: 0 30px;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.container h3{
+    color: #fff;
+}
+.container .cardd{
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0.92;
+    transition: all 0.5s;
+}
+.container .cardd:hover{
+    opacity: 0.96;
+}
+
+.container .cardd .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+}
+
+.container .cardd .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.container .cardd .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke:#191919 ;
+    transform: translate(5px,5px);
+
+}
+.container .cardd .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num) / 100 ));
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.dot::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow:  0 0 10px var(--clr),0 0 30px var(--clr);
+}
+
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.number h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.number h2 span{
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.5em;
+
+}
+
+.number p{
+    font-weight: 300;
+    font-size: 00.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.projects {
+    background: transparent;
+    background-size:cover ;
+    background-position: center;
+    background: opacity 0.9em; ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.projects .content{
+    margin-top: 30px;
+}
+.title-project{
+    color: whitesmoke;
+}
+.project-card{
+    background-color: #fff;
+    border: 2px solid #fff;
+    width: 23em;
+    margin: 5px 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.7s ease;
+    box-shadow: 1px 1px 10px rgb(95, 95, 95);
+}
+.project-card:hover{
+    transform: scale(1.1);
+
+}
+.project-card:hover .project-image{
+    opacity: 0.9;
+
+}
+
+.project-image img{
+    width: 100%;
+}
+ .project-info{
+     padding: 1em;
+ }
+
+ .project-category{
+     font-size: 0.8em;
+     color : #000 ;
+
+ }
+ .project-title{
+     display:flex;
+     justify-content:space-between;
+     text-transform: uppercase;
+     font-weight: 800;
+     margin-top: 10px ;
+ }
+ .more-details {
+     text-decoration: none;
+     color :#222;
+ }
+ .more-details:hover{
+     color:#601cfc;
+ }
+footer{
+    margin: 0;
+    background: #222;
+    color: #fff;
+
+
+}
+footer .about form input[type="textarea"]{
+    text-align: center;
+    font-weight: 700;
+    color: #222;
+    border-radius: 10px;
+    padding: 5px;
+    width: 300px;
+    height: 120px;
+    background: #fff;
+    outline: none;
+    
+}
+footer .about form button[type="submit"]{
+    background: #0d79af;
+    border-radius: 20px;
+    border :solid 5px #222 ;
+
+    font-size: 0.7em;
+    height: 60px;
+    width: 60px;
+    
+}
+footer .Copyrights{
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .Copyrights div i{
+    margin: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+ .about{
+    background: transparent;
+    color: whitesmoke;
+    padding: 20px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+
+ footer div ul{
+    list-style: none;
+ }
+ footer a{ 
+    text-decoration: none;
+    color: #0d79af;
+    padding: 5px;
+}
+footer span i {
+    padding: 10px;
+    font-size: 1em;
+}
+
+
+@media (max-width:800px) {
+    
+    
+    header{
+        padding: 5px;
+    }
+    header h1{
+        font-size: 1em;
+    }
+
+    #menubutton{
+        font-size: 1.4em;
+        margin: 10px;
+    }
+    input{
+        font-size: 15px;
+    }
+    input[type="text"]{
+        width: 25px;
+        height: 25px;
+        padding: 0 25px;
+
+    }
+    input[type="text"]:focus{
+        width: 130px;
+    
+    }
+    button[type="submit"]{
+        font-size: 0.8em;
+        height: 25px;
+    }
+    .navigation{
+        width: 200px;
+        height: 60px;
+    }
+    .navigation ul{
+        width: 150px;
+    }
+    .navigation ul li{
+        width: 50px;
+        height: 50px;
+    }
+
+    .navigation ul li a .icon{
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+
+
+    .card{
+        margin:10px 0;
+    }
+    
+    
+    .contentBx .content p{
+        font-size: 0.8em;
+    }
+
+    
+    .imgBx{
+        width: 200px;
+        height: 200px;
+    }
+
+    .content button{
+        top: -50px;
+    }
+
+    section .title{
+        font-size: 1.5em;
+    }
+    section{
+        padding: 40px 0;
+    }
+    .login h2{
+        margin-top: 200px;
+    }
+    footer .about form input[type="textarea"]{
+        font-size: 0.4em;
+        padding: 5px;
+        width: 150px;
+        height: 80px;
+    }
+    footer .about form button[type="submit"]{
+        font-size: 0.4em;
+        height: 50px;
+        width: 50px;
+        
+    }
+    footer .about{
+        flex-direction: column;
+    }
+    footer .about div{
+        margin: 10px 0;
+    }
+    footer .Copyrights {
+        font-size: 0.8em;
+    }
+    
+ }
+ @media (max-width:300px) {
+
+    header{
+        padding: 5px;
+    }
+    header h1{
+        font-size: 1em;
+    }
+
+    #menubutton{
+        font-size: 1.4em;
+        margin: 10px;
+    }
+    input{
+        font-size: 15px;
+    }
+    input[type="text"]{
+        width: 25px;
+        height: 25px;
+        padding: 0 25px;
+
+    }
+    input[type="text"]:focus{
+        width: 130px;
+    
+    }
+    button[type="submit"]{
+        font-size: 0.8em;
+        height: 25px;
+    }
+    .navigation{
+        width: 200px;
+        height: 60px;
+    }
+    .navigation ul{
+        width: 150px;
+    }
+    .navigation ul li{
+        width: 50px;
+        height: 50px;
+    }
+
+    .navigation ul li a .icon{
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+    .card{
+        margin:10px 0;
+    }
+    
+    
+    .contentBx .content p{
+        font-size: 0.7em;
+    }
+
+    
+    .imgBx{
+        width: 150px;
+        height: 150px;
+    }
+    .card1.active .imgBx{
+        width: 100px;
+        height: 100px;
+    }
+    .card2.active .imgBx{
+        width: 100px;
+        height: 100px;
+    }
+    .card3.active .imgBx{
+        width: 100px;
+        height: 100px;
+    }
+
+    .content button{
+        top: -10px;
+    }
+
+    section .title{
+        font-size: 1em;
+    }
+    section{
+        padding: 40px 0;
+    }
+    .login h2{
+        margin-top: 200px;
+    }
+    footer .about form input[type="textarea"]{
+        font-size: 0.4em;
+        padding: 5px;
+        width: 150px;
+        height: 80px;
+    }
+    footer .about form button[type="submit"]{
+        font-size: 0.4em;
+        height: 50px;
+        width: 50px;
+        
+    }
+    footer .about{
+        flex-direction: column;
+    }
+    footer .about div{
+        margin: 10px 0;
+    }
+    footer .Copyrights {
+        font-size: 0.5em;
+    }
+    
+ }
