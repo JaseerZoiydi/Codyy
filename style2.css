@@ -110,47 +110,6 @@ input[type="checkbox"]:checked ~ .check{
 }
 
 
-.navigation{
-    position: relative;
-    width: 280px;
-    height: 60px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-.navigation ul{
-    display: flex;
-    width: 350px;
-}
-.navigation ul li{
-    list-style: none;
-    position: relative;
-    width: 70px;
-    height: 60px;
-    z-index: 2; 
-}
-.navigation ul li a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-}
-.navigation ul li a .icon{
-    position: relative;
-    display: block;
-    line-height: 65px;
-    font-size: 1.5em;
-    transition: 0.5s;
-    color: #2196f3;
-}
-.navigation ul li.active a .icon{
-    transform: translateY(10px);
-}
 
 #menubutton{
     z-index: 100;
@@ -255,7 +214,7 @@ input[type="checkbox"]:checked ~ .check{
 .inputBox input:focus ~ span{
     height: 20px;
     opacity: 1;
-    background: #fff;
+    background: #f5fffa;
     border-left :solid 3px #00689b ;
     border-right :solid 3px #00689b ;
     color: #222;
