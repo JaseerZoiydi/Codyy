@@ -109,48 +109,6 @@ input[type="checkbox"]:checked ~ .check{
     background: #fff;
 }
 
-.navigation{
-    position: relative;
-    width: 280px;
-    height: 60px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-.navigation ul{
-    display: flex;
-    width: 350px;
-}
-.navigation ul li{
-    list-style: none;
-    position: relative;
-    width: 70px;
-    height: 60px;
-    z-index: 2; 
-}
-.navigation ul li a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-}
-.navigation ul li a .icon{
-    position: relative;
-    display: block;
-    line-height: 65px;
-    font-size: 1.5em;
-    transition: 0.5s;
-    color: #2196f3;
-}
-.navigation ul li.active a .icon{
-    transform: translateY(10px);
-}
-
 #menubutton{
     z-index: 100;
     font-size: 2em;
@@ -646,23 +604,6 @@ footer span i {
         font-size: 0.8em;
         height: 25px;
     }
-    .navigation{
-        width: 200px;
-        height: 60px;
-    }
-    .navigation ul{
-        width: 150px;
-    }
-    .navigation ul li{
-        width: 50px;
-        height: 50px;
-    }
-
-    .navigation ul li a .icon{
-        line-height: 50px;
-        font-size: 1.4em;
-    }
-
 
     .card{
         margin:10px 0;
@@ -744,22 +685,6 @@ footer span i {
     button[type="submit"]{
         font-size: 0.8em;
         height: 25px;
-    }
-    .navigation{
-        width: 200px;
-        height: 60px;
-    }
-    .navigation ul{
-        width: 150px;
-    }
-    .navigation ul li{
-        width: 50px;
-        height: 50px;
-    }
-
-    .navigation ul li a .icon{
-        line-height: 50px;
-        font-size: 1.4em;
     }
     .card{
         margin:10px 0;
