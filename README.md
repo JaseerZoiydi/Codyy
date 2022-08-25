@@ -1,2 +1,2 @@
 ## Codyy
-https://jaseerzoiydi.github.io/Codyy/login.html
+https://jasserzouaidi.github.io/Codyy/
